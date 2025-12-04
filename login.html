@@ -58,7 +58,37 @@
         </div>
       </div>
     </div>
+    <script>
+      const form = document.getElementById("registrationForm");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
+        // Ambil nilai input
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Validasi nama
+        if (name.length < 3) {
+          alert("Nama minimal 3 karakter");
+          return false;
+        }
+
+        // Validasi email
+        if (!email.includes("@")) {
+          alert("Format email tidak valid");
+          return false;
+        }
+
+        // Validasi password
+        if (password.length < 8) {
+          alert("Password minimal 8 karakter");
+          return false;
+        }
+
+        alert("Form valid! Data siap dikirim.");
+      });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
