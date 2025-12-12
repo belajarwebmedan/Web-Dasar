@@ -15,7 +15,7 @@
     <div class="d-flex justify-content-center">
       <div class="card" style="width: 24rem">
         <div class="card-body">
-          <h5 class="card-title">Login</h5>
+          <h5 class="card-title"><?php echo "Login Sistem"; ?></h5>
           <form>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">
